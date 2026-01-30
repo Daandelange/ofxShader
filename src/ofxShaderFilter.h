@@ -9,7 +9,7 @@ struct Uniform {
 };
 
 typedef map<string, Uniform> UniformDataList;
-typedef map<string, ofTexture*> TextureList;
+typedef map<string, const ofTexture*> TextureList;
 
 class ofxShaderFilter : public ofBaseDraws, public ofBaseHasTexture {
 public:
@@ -37,8 +37,8 @@ public:
     virtual void    setUniform4f(const string &_name, const ofFloatColor & v);
 
     // set a texture reference
-    virtual void    setUniformTexture(const string &_name, ofBaseHasTexture& img);
-    virtual void    setUniformTexture(const string &_name, ofTexture& img);
+    virtual void    setUniformTexture(const string &_name, const ofBaseHasTexture& img);
+    virtual void    setUniformTexture(const string &_name, const ofTexture& img);
 
     virtual void    render();
 

@@ -117,11 +117,11 @@ void ofxShaderFilter::setUniform4f(const string &_name, float v1, float v2, floa
     m_uniformsData[_name].bInt = false;
 }
 
-void ofxShaderFilter::setUniformTexture(const string &_name, ofBaseHasTexture& img) {
+void ofxShaderFilter::setUniformTexture(const string &_name, const ofBaseHasTexture& img) {
     m_textures[_name] = &img.getTexture();
 }
 
-void ofxShaderFilter::setUniformTexture(const string &_name, ofTexture& img) {
+void ofxShaderFilter::setUniformTexture(const string &_name, const ofTexture& img) {
     m_textures[_name] = &img;
 }
 
