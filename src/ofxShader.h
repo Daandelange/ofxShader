@@ -70,7 +70,7 @@ private:
     std::time_t     _getLastModified(ofFile& _file);
     bool            _filesChanged();
     
-    vector<time_t>  m_fileChangedTimes;
+    vector<std::time_t>  m_fileChangedTimes;
     
     ofFile          m_vertexShaderFile;
     ofFile          m_fragmentShaderFile;
